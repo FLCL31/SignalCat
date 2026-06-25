@@ -13,11 +13,11 @@
 | Metric | Value |
 | --- | ---: |
 | Initial Cash | 10000.00 |
-| Ending Equity | 10062.29 |
-| Total Return | 0.62% |
-| Annualized Return | 4.71% |
+| Ending Equity | 10161.85 |
+| Total Return | 1.62% |
+| Annualized Return | 12.64% |
 | Max Drawdown | -9.79% |
-| Sharpe | 0.31 |
+| Sharpe | 0.60 |
 | Total Fees | 21.22 |
 | Fee Bps | 10.00 |
 | Slippage Bps | 5.00 |
@@ -26,9 +26,9 @@
 
 | Rank | Ticker | Bitget Symbol | Score | Reason |
 | ---: | --- | --- | ---: | --- |
-| 1 | GEV | RGEVUSDT | 80.76 | bitget RGEVUSDT price 1071.72; 20d return 12.4%; category leadership 100/100. |
-| 2 | EXC | REXCUSDT | 74.50 | bitget REXCUSDT price 47.38; 20d return 5.9%; category leadership 100/100. |
-| 3 | SMR | RSMRUSDT | 49.99 | bitget RSMRUSDT price 9.96; 20d return -24.4%; category leadership 100/100. |
+| 1 | GEV | RGEVUSDT | 80.86 | bitget RGEVUSDT price 1096.38; 20d return 15.0%; category leadership 100/100. |
+| 2 | EXC | REXCUSDT | 72.56 | bitget REXCUSDT price 46.98; 20d return 5.0%; category leadership 100/100. |
+| 3 | SMR | RSMRUSDT | 50.66 | bitget RSMRUSDT price 10.29; 20d return -21.8%; category leadership 100/100. |
 
 ## Thesis
 
