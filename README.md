@@ -95,4 +95,4 @@ Railway / Render:
 
 - The default route is Bitget-only. Set `YFINANCE_FALLBACK=true` only if you explicitly want public-market fallback data.
 - Real orders are not implemented. All trading is simulated.
-- `logs/trades.csv` is generated output and ignored by git.
+- `logs/trades.csv` is included as a sample paper-trading log and can be regenerated.

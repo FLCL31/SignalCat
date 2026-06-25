@@ -1,0 +1,85 @@
+# Project Workflow
+
+## User Flow
+
+1. Configure `.env` with DeepSeek and Bitget credentials.
+2. Check the watchlist:
+
+```bash
+python3 main.py parse-universe
+```
+
+3. Check Bitget symbol coverage:
+
+```bash
+python3 main.py check-symbols
+```
+
+4. Run a signal cycle:
+
+```bash
+python3 main.py run --limit 24 --history-days 120 --backtest-days 30
+```
+
+5. Open the dashboard:
+
+```bash
+python3 app.py
+```
+
+6. Review rankings, factor contribution, paper-trading PnL, recent trades, and skipped tickers.
+
+## System Flow
+
+```text
+LIST.md
+  -> parse universe
+  -> map ticker to Bitget spot symbol
+  -> fetch Bitget candles
+  -> compute factors
+  -> score and rank
+  -> ask DeepSeek for concise rationale
+  -> run paper-trading backtest
+  -> write SQLite/CSV logs
+  -> render Gradio dashboard
+```
+
+## Operating Modes
+
+- Dashboard mode: use `python3 app.py` and click `Run Pipeline`.
+- CLI mode: use `python3 main.py run ...` for scripted runs.
+- Coverage mode: use `python3 main.py check-symbols` before expanding the universe.
+
+## Three-Month Backtest
+
+The current paper-trading engine supports a three-month window. Use:
+
+```bash
+python3 main.py run --limit 24 --history-days 140 --backtest-days 90
+```
+
+The dashboard also allows `Backtest Days` up to `90`.
+
+## Telegram Bot Fit
+
+Telegram is a good next interface, but it should be read-only / paper-only for this MVP.
+
+Recommended commands:
+
+```text
+/status
+/run
+/top
+/pnl
+/trades
+/errors
+```
+
+Required environment variables:
+
+```bash
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_ALLOWED_CHAT_ID=
+```
+
+The bot must restrict `TELEGRAM_ALLOWED_CHAT_ID` to avoid public abuse of DeepSeek and Bitget API calls.
