@@ -231,7 +231,7 @@ def check_symbols(limit: int = 0) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="SignalForge AI Stocks")
+    parser = argparse.ArgumentParser(description="SignalCat")
     sub = parser.add_subparsers(dest="command")
 
     sub.add_parser("parse-universe", help="Parse LIST.md and write data/universe.csv")

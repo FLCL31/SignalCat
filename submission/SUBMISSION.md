@@ -1,6 +1,6 @@
 # Submission Links
 
-- GitHub:
+- GitHub: https://github.com/FLCL31/SignalCat
 - Dashboard:
 - Demo video:
 - X post:
@@ -8,7 +8,7 @@
 
 ## Project Description Draft
 
-SignalForge AI Stocks converts a 211-stock AI industry-chain watchlist into a dynamic multi-factor ranking and paper-trading system. It uses Bitget market data, technical and momentum factors, category leadership scoring, DeepSeek-generated reasoning, and reproducible SQLite/CSV paper-trading logs.
+SignalCat converts a 211-stock AI industry-chain watchlist into a dynamic multi-factor ranking and paper-trading system. It uses Bitget market data, technical and momentum factors, category leadership scoring, DeepSeek-generated reasoning, and reproducible SQLite/CSV paper-trading logs.
 
 ## Local Verification
 

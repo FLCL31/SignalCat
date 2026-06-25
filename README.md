@@ -1,6 +1,6 @@
-# SignalForge AI Stocks
+# SignalCat
 
-SignalForge AI Stocks is a Bitget-first AI stock signal engine for the Bitget AI Hackathon Track 3. It turns a static TradingView watchlist of 211 US-listed AI infrastructure and application stocks into ranked signals, DeepSeek-generated reasoning, and reproducible paper-trading records.
+SignalCat is a Bitget-first AI stock signal engine for the Bitget AI Hackathon Track 3. It turns a static TradingView watchlist of 211 US-listed AI infrastructure and application stocks into ranked signals, DeepSeek-generated reasoning, and reproducible paper-trading records.
 
 The project is paper-only. It does not place real orders or require live account funds.
 
@@ -205,8 +205,6 @@ The codebase is a working MVP for Bitget Hackathon Track 3:
 
 Remaining external submission tasks:
 
-- Create the public GitHub repository.
-- Push this code to the repository.
 - Deploy the Gradio dashboard to a public URL.
 - Record a short demo video.
 - Publish the required X post.
@@ -223,8 +221,8 @@ Remaining external submission tasks:
 
 ## Submission Repository
 
-GitHub repository used for submission:
+GitHub repository:
 
 ```text
-SignalCat
+https://github.com/FLCL31/SignalCat
 ```
