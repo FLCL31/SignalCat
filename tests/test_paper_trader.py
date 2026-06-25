@@ -2,6 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from main import apply_backtest_preset
 from trading.paper_trader import run_backtest
 from utils.config import AppConfig
 
@@ -15,6 +16,8 @@ def _config() -> AppConfig:
         top_n=2,
         max_position_pct=0.2,
         stop_loss_pct=-0.05,
+        fee_bps=10.0,
+        slippage_bps=5.0,
         deepseek_api_key="",
         deepseek_base_url="https://api.deepseek.com",
         deepseek_model="deepseek-chat",
@@ -44,4 +47,12 @@ def test_run_backtest_generates_trades():
     result = run_backtest(rankings, {"AAA": _history(1), "BBB": _history(0.5), "CCC": _history(0.2)}, _config(), days=20)
     assert not result.trades.empty
     assert not result.equity_curve.empty
+    assert not result.performance.empty
+    assert {"notional", "fee"}.issubset(result.trades.columns)
     assert set(result.trades["direction"]).issubset({"BUY", "SELL"})
+
+
+def test_backtest_presets_expand_windows():
+    assert apply_backtest_preset("3m", 30, 7) == (140, 90)
+    assert apply_backtest_preset("6m", 120, 30) == (220, 180)
+    assert apply_backtest_preset(None, 120, 30) == (120, 30)

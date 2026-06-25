@@ -51,6 +51,8 @@ class AppConfig:
     top_n: int
     max_position_pct: float
     stop_loss_pct: float
+    fee_bps: float
+    slippage_bps: float
     deepseek_api_key: str
     deepseek_base_url: str
     deepseek_model: str
@@ -72,6 +74,8 @@ class AppConfig:
             top_n=_int(values, "TOP_N", 5),
             max_position_pct=_float(values, "MAX_POSITION_PCT", 0.20),
             stop_loss_pct=_float(values, "STOP_LOSS_PCT", -0.05),
+            fee_bps=_float(values, "FEE_BPS", 10.0),
+            slippage_bps=_float(values, "SLIPPAGE_BPS", 5.0),
             deepseek_api_key=values.get("DEEPSEEK_API_KEY", ""),
             deepseek_base_url=values.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com").rstrip("/"),
             deepseek_model=values.get("DEEPSEEK_MODEL", "deepseek-chat"),

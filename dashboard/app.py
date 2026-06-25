@@ -20,13 +20,14 @@ try:
 except ModuleNotFoundError:  # pragma: no cover
     px = None
 
-from main import run_pipeline
+from main import apply_backtest_preset, run_pipeline
 from trading.logger import load_trades
 from utils.config import ROOT
 
 
 RANKINGS_PATH = ROOT / "data/latest_rankings.csv"
 EQUITY_PATH = ROOT / "data/equity_curve.csv"
+PERFORMANCE_PATH = ROOT / "data/performance_summary.csv"
 TRADES_DB_PATH = ROOT / "data/trades.db"
 TRADES_CSV_PATH = ROOT / "logs/trades.csv"
 ERRORS_PATH = ROOT / "data/data_errors.csv"
@@ -104,25 +105,39 @@ def _factor_plot(rankings: pd.DataFrame):
     return fig
 
 
-def _metrics_html(rankings: pd.DataFrame, equity: pd.DataFrame, trades: pd.DataFrame, errors: pd.DataFrame) -> str:
+def _performance_value(performance: pd.DataFrame, metric: str, default: str = "--") -> str:
+    if performance.empty or "metric" not in performance or "value" not in performance:
+        return default
+    rows = performance.loc[performance["metric"] == metric, "value"]
+    if rows.empty:
+        return default
+    value = float(rows.iloc[0])
+    if metric in {"Total Return", "Annualized Return", "Max Drawdown"}:
+        return f"{value:.2%}"
+    if metric in {"Sharpe"}:
+        return f"{value:.2f}"
+    if metric in {"Trade Count"}:
+        return f"{int(value)}"
+    return f"{value:.2f}"
+
+
+def _metrics_html(rankings: pd.DataFrame, equity: pd.DataFrame, trades: pd.DataFrame, errors: pd.DataFrame, performance: pd.DataFrame) -> str:
     top_score = "--"
     top_ticker = "No ranking"
     if not rankings.empty:
         top_score = f"{float(rankings.iloc[0]['score']):.1f}"
         top_ticker = str(rankings.iloc[0]["ticker"])
-    pnl = "--"
-    if not equity.empty and "equity" in equity.columns:
-        first = float(equity["equity"].iloc[0])
-        last = float(equity["equity"].iloc[-1])
-        pnl = f"{last - first:+.2f}"
-    trade_count = len(trades)
+    total_return = _performance_value(performance, "Total Return")
+    max_drawdown = _performance_value(performance, "Max Drawdown")
+    sharpe = _performance_value(performance, "Sharpe")
+    trade_count = _performance_value(performance, "Trade Count", str(len(trades)))
     skipped = len(errors)
     return f"""
 <div class="metric-grid">
   <div class="metric-card"><div class="metric-label">Top Signal</div><div class="metric-value">{top_ticker}</div><div class="metric-note">Score {top_score}</div></div>
-  <div class="metric-card"><div class="metric-label">Paper PnL</div><div class="metric-value">{pnl}</div><div class="metric-note">Backtest equity delta</div></div>
-  <div class="metric-card"><div class="metric-label">Trades</div><div class="metric-value">{trade_count}</div><div class="metric-note">CSV + SQLite logged</div></div>
-  <div class="metric-card"><div class="metric-label">Skipped</div><div class="metric-value">{skipped}</div><div class="metric-note">Unsupported or unavailable</div></div>
+  <div class="metric-card"><div class="metric-label">Total Return</div><div class="metric-value">{total_return}</div><div class="metric-note">Paper backtest</div></div>
+  <div class="metric-card"><div class="metric-label">Max Drawdown</div><div class="metric-value">{max_drawdown}</div><div class="metric-note">Equity curve risk</div></div>
+  <div class="metric-card"><div class="metric-label">Sharpe</div><div class="metric-value">{sharpe}</div><div class="metric-note">{trade_count} trades, {skipped} skipped</div></div>
 </div>
 """
 
@@ -130,6 +145,7 @@ def _metrics_html(rankings: pd.DataFrame, equity: pd.DataFrame, trades: pd.DataF
 def load_dashboard_data():
     rankings = _read_csv(RANKINGS_PATH)
     equity = _read_csv(EQUITY_PATH)
+    performance = _read_csv(PERFORMANCE_PATH)
     errors = _read_csv(ERRORS_PATH)
     trades = load_trades(TRADES_DB_PATH)
     display_cols = [
@@ -151,14 +167,16 @@ def load_dashboard_data():
     else:
         rankings_display = rankings
     status = "Loaded cached outputs." if not rankings.empty else "No cached outputs yet. Run pipeline first."
-    return status, _metrics_html(rankings, equity, trades, errors), rankings_display, _factor_plot(rankings), _pnl_plot(equity), trades.tail(50), errors, str(TRADES_CSV_PATH)
+    return status, _metrics_html(rankings, equity, trades, errors, performance), rankings_display, _factor_plot(rankings), _pnl_plot(equity), trades.tail(50), performance, errors, str(TRADES_CSV_PATH)
 
 
-def run_dashboard_pipeline(limit: int, history_days: int, backtest_days: int, use_llm: bool):
+def run_dashboard_pipeline(limit: int, preset: str, history_days: int, backtest_days: int, use_llm: bool):
+    preset_key = {"Custom": None, "3 Months": "3m", "6 Months": "6m"}.get(preset)
+    history_days, backtest_days = apply_backtest_preset(preset_key, int(history_days), int(backtest_days))
     result = run_pipeline(
         limit=int(limit),
-        history_days=int(history_days),
-        backtest_days=int(backtest_days),
+        history_days=history_days,
+        backtest_days=backtest_days,
         use_llm=bool(use_llm),
         reset_logs=True,
     )
@@ -170,7 +188,7 @@ def run_dashboard_pipeline(limit: int, history_days: int, backtest_days: int, us
     rankings = result.rankings.head(30)
     trades = load_trades(TRADES_DB_PATH).tail(50)
     errors = _read_csv(ROOT / "data/data_errors.csv")
-    return status, _metrics_html(result.rankings, result.backtest.equity_curve, trades, errors), rankings, _factor_plot(result.rankings), _pnl_plot(result.backtest.equity_curve), trades, errors, str(result.trades_csv_path)
+    return status, _metrics_html(result.rankings, result.backtest.equity_curve, trades, errors, result.backtest.performance), rankings, _factor_plot(result.rankings), _pnl_plot(result.backtest.equity_curve), trades, result.backtest.performance, errors, str(result.trades_csv_path)
 
 
 def build_app():
@@ -187,8 +205,9 @@ def build_app():
             with gr.Group(elem_classes=["control-panel"]):
                 with gr.Row():
                     limit = gr.Slider(5, 211, value=24, step=1, label="Ticker Limit")
+                    preset = gr.Radio(["Custom", "3 Months", "6 Months"], value="Custom", label="Backtest Preset")
                     history_days = gr.Slider(30, 240, value=120, step=10, label="History Days")
-                    backtest_days = gr.Slider(7, 90, value=30, step=1, label="Backtest Days")
+                    backtest_days = gr.Slider(7, 180, value=30, step=1, label="Backtest Days")
                     use_llm = gr.Checkbox(value=True, label="Use DeepSeek")
                 with gr.Row():
                     run_btn = gr.Button("Run Pipeline", variant="primary")
@@ -201,13 +220,14 @@ def build_app():
                     factor_plot = gr.Plot(label="Factor Contribution")
                 with gr.Tab("Trading"):
                     pnl_plot = gr.Plot(label="Paper Trading PnL")
+                    performance = gr.Dataframe(label="Performance Summary", interactive=False, wrap=True)
                     trades = gr.Dataframe(label="Recent Trades", interactive=False, wrap=True)
                     download = gr.File(label="Download trades.csv", interactive=False)
                 with gr.Tab("Coverage"):
                     errors = gr.Dataframe(label="Skipped / Data Errors", interactive=False, wrap=True)
 
-        outputs = [status, metrics, rankings, factor_plot, pnl_plot, trades, errors, download]
-        run_btn.click(run_dashboard_pipeline, inputs=[limit, history_days, backtest_days, use_llm], outputs=outputs)
+        outputs = [status, metrics, rankings, factor_plot, pnl_plot, trades, performance, errors, download]
+        run_btn.click(run_dashboard_pipeline, inputs=[limit, preset, history_days, backtest_days, use_llm], outputs=outputs)
         refresh_btn.click(load_dashboard_data, outputs=outputs)
         demo.load(load_dashboard_data, outputs=outputs)
     return demo

@@ -36,6 +36,18 @@ Run the MVP pipeline:
 python main.py run --limit 24 --history-days 120 --backtest-days 30
 ```
 
+Run a three-month paper backtest:
+
+```bash
+python main.py run --limit 24 --preset 3m
+```
+
+Run a six-month paper backtest:
+
+```bash
+python main.py run --limit 24 --preset 6m
+```
+
 Check Bitget symbol coverage for the full watchlist:
 
 ```bash
@@ -71,6 +83,7 @@ GRADIO_SHARE=true python app.py
 - `data/universe.csv`
 - `data/latest_rankings.csv`
 - `data/equity_curve.csv`
+- `data/performance_summary.csv`
 - `data/data_errors.csv`
 - `data/bitget_symbol_coverage.csv`
 - `data/trades.db`

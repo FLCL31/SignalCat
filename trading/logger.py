@@ -14,6 +14,8 @@ TRADE_COLUMNS = [
     "price",
     "quantity",
     "balance_change",
+    "notional",
+    "fee",
     "reason",
 ]
 
@@ -35,10 +37,17 @@ def init_db(path: str | Path = "data/trades.db", reset: bool = False) -> Path:
                 price REAL NOT NULL,
                 quantity REAL NOT NULL,
                 balance_change REAL NOT NULL,
+                notional REAL NOT NULL DEFAULT 0,
+                fee REAL NOT NULL DEFAULT 0,
                 reason TEXT NOT NULL
             )
             """
         )
+        existing = {row[1] for row in conn.execute("PRAGMA table_info(trades)").fetchall()}
+        if "notional" not in existing:
+            conn.execute("ALTER TABLE trades ADD COLUMN notional REAL NOT NULL DEFAULT 0")
+        if "fee" not in existing:
+            conn.execute("ALTER TABLE trades ADD COLUMN fee REAL NOT NULL DEFAULT 0")
     return db_path
 
 
@@ -56,6 +65,7 @@ def load_trades(db_path: str | Path = "data/trades.db") -> pd.DataFrame:
     path = Path(db_path)
     if not path.exists():
         return pd.DataFrame(columns=TRADE_COLUMNS)
+    init_db(path, reset=False)
     with sqlite3.connect(path) as conn:
         return pd.read_sql_query("SELECT * FROM trades ORDER BY timestamp, id", conn)
 

@@ -55,10 +55,18 @@ LIST.md
 The current paper-trading engine supports a three-month window. Use:
 
 ```bash
-python3 main.py run --limit 24 --history-days 140 --backtest-days 90
+python3 main.py run --limit 24 --preset 3m
 ```
 
-The dashboard also allows `Backtest Days` up to `90`.
+The dashboard also allows `Backtest Days` up to `180` and includes `Custom`, `3 Months`, and `6 Months` presets.
+
+Six-month mode:
+
+```bash
+python3 main.py run --limit 24 --preset 6m
+```
+
+The engine applies `FEE_BPS` and `SLIPPAGE_BPS` from `.env` to paper-trading executions.
 
 ## Telegram Bot Fit
 
