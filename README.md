@@ -60,6 +60,12 @@ Then open:
 http://127.0.0.1:7860
 ```
 
+Temporary public preview without a deployment account:
+
+```bash
+GRADIO_SHARE=true python app.py
+```
+
 ## Outputs
 
 - `data/universe.csv`
