@@ -8,7 +8,7 @@
 
 ## Project Description Draft
 
-AI Hybrid Signal Engine converts a 211-stock AI industry-chain watchlist into a dynamic multi-factor ranking and paper-trading system. It uses Bitget market data, technical and momentum factors, category leadership scoring, DeepSeek-generated reasoning, and reproducible SQLite/CSV paper-trading logs.
+SignalForge AI Stocks converts a 211-stock AI industry-chain watchlist into a dynamic multi-factor ranking and paper-trading system. It uses Bitget market data, technical and momentum factors, category leadership scoring, DeepSeek-generated reasoning, and reproducible SQLite/CSV paper-trading logs.
 
 ## Local Verification
 

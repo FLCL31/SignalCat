@@ -36,6 +36,12 @@ def _history(mult: float) -> pd.DataFrame:
     return pd.DataFrame({"close": close, "volume": [1000] * 45}, index=index)
 
 
+def _stop_loss_history() -> pd.DataFrame:
+    index = pd.date_range("2026-01-01", periods=12, freq="D")
+    close = [100, 100, 100, 100, 100, 100, 88, 90, 92, 94, 96, 98]
+    return pd.DataFrame({"close": close, "volume": [1000] * 12}, index=index)
+
+
 def test_run_backtest_generates_trades():
     rankings = pd.DataFrame(
         [
@@ -56,3 +62,19 @@ def test_backtest_presets_expand_windows():
     assert apply_backtest_preset("3m", 30, 7) == (140, 90)
     assert apply_backtest_preset("6m", 120, 30) == (220, 180)
     assert apply_backtest_preset(None, 120, 30) == (120, 30)
+
+
+def test_stop_loss_does_not_rebuy_same_ticker_same_day():
+    rankings = pd.DataFrame(
+        [
+            {"ticker": "AAA", "symbol": "AAAONUSDT", "price": 100, "reason": "test", "score": 90},
+        ]
+    )
+    result = run_backtest(rankings, {"AAA": _stop_loss_history()}, _config(), days=12)
+    trades = result.trades
+    stop_sells = trades[(trades["direction"] == "SELL") & (trades["reason"] == "stop loss")]
+
+    assert not stop_sells.empty
+    for timestamp in stop_sells["timestamp"]:
+        same_time = trades[trades["timestamp"] == timestamp]
+        assert not ((same_time["ticker"] == "AAA") & (same_time["direction"] == "BUY")).any()

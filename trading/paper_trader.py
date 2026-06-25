@@ -45,6 +45,7 @@ def run_backtest(
         if common.empty:
             continue
 
+        stopped_today: set[str] = set()
         equity = cash + sum(qty * float(current.get(ticker, 0.0)) for ticker, qty in positions.items())
         equity_rows.append({"timestamp": date, "equity": equity, "cash": cash})
 
@@ -58,6 +59,8 @@ def run_backtest(
                 stop_tickers.append(ticker)
         for ticker in stop_tickers:
             cash += _sell(ticker, date, float(current[ticker]), positions, trades, rank_meta, config, "stop loss")
+            entry_prices.pop(ticker, None)
+            stopped_today.add(ticker)
 
         momentum = (current[common] / previous[common] - 1.0).sort_values(ascending=False)
         target = set(momentum.head(top_n).index)
@@ -65,10 +68,11 @@ def run_backtest(
         for ticker in list(positions):
             if ticker not in target and ticker in current.index and not pd.isna(current[ticker]):
                 cash += _sell(ticker, date, float(current[ticker]), positions, trades, rank_meta, config, "rebalance")
+                entry_prices.pop(ticker, None)
 
         equity = cash + sum(qty * float(current.get(ticker, 0.0)) for ticker, qty in positions.items())
         for ticker in target:
-            if ticker in positions or ticker not in current.index or pd.isna(current[ticker]):
+            if ticker in stopped_today or ticker in positions or ticker not in current.index or pd.isna(current[ticker]):
                 continue
             price = float(current[ticker])
             allocation = min(config.max_position_pct * equity, cash)

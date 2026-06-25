@@ -192,12 +192,12 @@ def run_dashboard_pipeline(limit: int, preset: str, history_days: int, backtest_
 
 
 def build_app():
-    with gr.Blocks(title="AI Hybrid Signal Engine") as demo:
+    with gr.Blocks(title="SignalForge AI Stocks") as demo:
         with gr.Column(elem_classes=["app-shell"]):
             gr.HTML(
                 """
 <div class="hero">
-  <h1>AI Hybrid Signal Engine</h1>
+  <h1>SignalForge AI Stocks</h1>
   <p>Bitget-first AI stock-chain ranking, DeepSeek signal rationale, and paper-trading audit logs.</p>
 </div>
 """

@@ -1,7 +1,3 @@
 ticker,error
-NVTS,"bitget failed and yfinance fallback is disabled: No Bitget spot symbol found for NVTS; tried ['NVTSONUSDT', 'RNVTSUSDT', 'NVTSUSDT']"
-PENG,"bitget failed and yfinance fallback is disabled: No Bitget spot symbol found for PENG; tried ['PENGONUSDT', 'RPENGUSDT', 'PENGUSDT']"
-POET,"bitget failed and yfinance fallback is disabled: No Bitget spot symbol found for POET; tried ['POETONUSDT', 'RPOETUSDT', 'POETUSDT']"
 PRIM,"bitget failed and yfinance fallback is disabled: No Bitget spot symbol found for PRIM; tried ['PRIMONUSDT', 'RPRIMUSDT', 'PRIMUSDT']"
-TTMI,"bitget failed and yfinance fallback is disabled: No Bitget spot symbol found for TTMI; tried ['TTMIONUSDT', 'RTTMIUSDT', 'TTMIUSDT']"
 UUUU,"bitget failed and yfinance fallback is disabled: No Bitget spot symbol found for UUUU; tried ['UUUUONUSDT', 'RUUUUUSDT', 'UUUUUSDT']"

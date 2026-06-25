@@ -68,26 +68,6 @@ python3 main.py run --limit 24 --preset 6m
 
 The engine applies `FEE_BPS` and `SLIPPAGE_BPS` from `.env` to paper-trading executions.
 
-## Telegram Bot Fit
+## Deferred Interfaces
 
-Telegram is a good next interface, but it should be read-only / paper-only for this MVP.
-
-Recommended commands:
-
-```text
-/status
-/run
-/top
-/pnl
-/trades
-/errors
-```
-
-Required environment variables:
-
-```bash
-TELEGRAM_BOT_TOKEN=
-TELEGRAM_ALLOWED_CHAT_ID=
-```
-
-The bot must restrict `TELEGRAM_ALLOWED_CHAT_ID` to avoid public abuse of DeepSeek and Bitget API calls.
+Telegram bot control is intentionally deferred. The current MVP focuses on the CLI, Gradio dashboard, Bitget market data, DeepSeek explanations, and reproducible paper-trading logs.

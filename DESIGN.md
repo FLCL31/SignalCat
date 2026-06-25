@@ -1,8 +1,8 @@
-# DESIGN.md: AI Hybrid Signal Engine for AI US Stock Universe (Bitget AI Hackathon S1 - Track 3)
+# DESIGN.md: SignalForge AI Stocks for AI US Stock Universe (Bitget AI Hackathon S1 - Track 3)
 
 ## 项目概述与核心 Thesis
 
-**项目名称**：AI-Hybrid-Signal-Engine（或 TradingView-AI-Stock-Hybrid-Signal）
+**项目名称**：SignalForge AI Stocks
 
 **所属赛道**：Stock AI Trading 主赛道（Track 3）
 

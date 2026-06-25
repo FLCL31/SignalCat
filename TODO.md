@@ -1,10 +1,10 @@
-# TODO.md: AI Hybrid Signal Engine MVP Plan
+# TODO.md: SignalForge AI Stocks MVP Plan
 
 ## 1. 项目理解
 
 当前目录文档描述的是一个面向 **Bitget AI Hackathon S1 - Track 3 / Stock AI Trading** 的项目：
 
-- 项目名称暂定：`AI-Hybrid-Signal-Engine`
+- 项目名称：`SignalForge AI Stocks`
 - 核心目标：把 `LIST.md` 中的 TradingView AI 美股产业链静态股票池，转化成一个可运行、可验证的动态交易信号系统。
 - 当前股票池：`LIST.md` 已确认为 **211 只股票 / 24 个分类**。
 - 核心方法：结合价格/技术指标、动量、行业内龙头分数、宏观/情绪因子，以及 DeepSeek LLM 推理，生成排名、交易理由和 paper trading 记录。
