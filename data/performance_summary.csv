@@ -1,11 +1,11 @@
 metric,value
 Initial Cash,10000.0
-Ending Equity,17674.77740430957
-Total Return,0.767477740430957
-Annualized Return,1.0798236436975523
-Max Drawdown,-0.20274565771622788
-Sharpe,1.9273655100735394
-Trade Count,565.0
-Total Fees,1492.6714386715064
+Ending Equity,14472.01259774627
+Total Return,0.4472012597746271
+Annualized Return,1.332153809267413
+Max Drawdown,-0.18533425276817472
+Sharpe,2.147312979819605
+Trade Count,315.0
+Total Fees,759.7308520842009
 Fee Bps,10.0
 Slippage Bps,5.0
