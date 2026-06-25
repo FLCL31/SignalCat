@@ -1,0 +1,212 @@
+ticker,category,exchange,bitget_symbol,status,error
+GEV,L0电网输配与电气设备,NYSE,RGEVUSDT,supported,
+NVT,L0电网输配与电气设备,NYSE,,unsupported,"No Bitget spot symbol found for NVT; tried ['NVTONUSDT', 'RNVTUSDT', 'NVTUSDT']"
+ETN,L0电网输配与电气设备,NYSE,RETNUSDT,supported,
+HUBB,L0电网输配与电气设备,NYSE,,unsupported,"No Bitget spot symbol found for HUBB; tried ['HUBBONUSDT', 'RHUBBUSDT', 'HUBBUSDT']"
+POWL,L0电网输配与电气设备,NASDAQ,,unsupported,"No Bitget spot symbol found for POWL; tried ['POWLONUSDT', 'RPOWLUSDT', 'POWLUSDT']"
+ATKR,L0电网输配与电气设备,NYSE,,unsupported,"No Bitget spot symbol found for ATKR; tried ['ATKRONUSDT', 'RATKRUSDT', 'ATKRUSDT']"
+PRIM,L0电网与数据中心EPC建设,NYSE,,unsupported,"No Bitget spot symbol found for PRIM; tried ['PRIMONUSDT', 'RPRIMUSDT', 'PRIMUSDT']"
+PWR,L0电网与数据中心EPC建设,NYSE,RPWRUSDT,supported,
+STRL,L0电网与数据中心EPC建设,NASDAQ,,unsupported,"No Bitget spot symbol found for STRL; tried ['STRLONUSDT', 'RSTRLUSDT', 'STRLUSDT']"
+MTZ,L0电网与数据中心EPC建设,NYSE,RMTZUSDT,supported,
+AGX,L0电网与数据中心EPC建设,NYSE,,unsupported,"No Bitget spot symbol found for AGX; tried ['AGXONUSDT', 'RAGXUSDT', 'AGXUSDT']"
+DY,L0电网与数据中心EPC建设,NYSE,,unsupported,"No Bitget spot symbol found for DY; tried ['DYONUSDT', 'RDYUSDT', 'DYUSDT']"
+EME,L0电网与数据中心EPC建设,NYSE,,unsupported,"No Bitget spot symbol found for EME; tried ['EMEONUSDT', 'REMEUSDT', 'EMEUSDT']"
+MYRG,L0电网与数据中心EPC建设,NASDAQ,,unsupported,"No Bitget spot symbol found for MYRG; tried ['MYRGONUSDT', 'RMYRGUSDT', 'MYRGUSDT']"
+SMR,L0发电核电与独立电力,NYSE,RSMRUSDT,supported,
+OKLO,L0发电核电与独立电力,NYSE,ROKLOUSDT,supported,
+VST,L0发电核电与独立电力,NYSE,RVSTUSDT,supported,
+CEG,L0发电核电与独立电力,NASDAQ,RCEGUSDT,supported,
+NRG,L0发电核电与独立电力,NYSE,,unsupported,"No Bitget spot symbol found for NRG; tried ['NRGONUSDT', 'RNRGUSDT', 'NRGUSDT']"
+TLN,L0发电核电与独立电力,NASDAQ,RTLNUSDT,supported,
+EXC,L0公用事业-数据中心负荷,NASDAQ,REXCUSDT,supported,
+PCG,L0公用事业-数据中心负荷,NYSE,RPCGUSDT,supported,
+NEE,L0公用事业-数据中心负荷,NYSE,RNEEUSDT,supported,
+AEP,L0公用事业-数据中心负荷,NASDAQ,RAEPUSDT,supported,
+SO,L0公用事业-数据中心负荷,NYSE,SOONUSDT,supported,
+XEL,L0公用事业-数据中心负荷,NASDAQ,RXELUSDT,supported,
+D,L0公用事业-数据中心负荷,NYSE,RDUSDT,supported,
+DUK,L0公用事业-数据中心负荷,NYSE,RDUKUSDT,supported,
+ETR,L0公用事业-数据中心负荷,NYSE,RETRUSDT,supported,
+PEG,L0公用事业-数据中心负荷,NYSE,,unsupported,"No Bitget spot symbol found for PEG; tried ['PEGONUSDT', 'RPEGUSDT', 'PEGUSDT']"
+UUUU,L0核电铀燃料,AMEX,,unsupported,"No Bitget spot symbol found for UUUU; tried ['UUUUONUSDT', 'RUUUUUSDT', 'UUUUUSDT']"
+UEC,L0核电铀燃料,AMEX,RUECUSDT,supported,
+NNE,L0核电铀燃料,NASDAQ,,unsupported,"No Bitget spot symbol found for NNE; tried ['NNEONUSDT', 'RNNEUSDT', 'NNEUSDT']"
+CCJ,L0核电铀燃料,NYSE,RCCJUSDT,supported,
+LEU,L0核电铀燃料,NYSE,,unsupported,"No Bitget spot symbol found for LEU; tried ['LEUONUSDT', 'RLEUUSDT', 'LEUUSDT']"
+BWXT,L0核电铀燃料,NYSE,RBWXTUSDT,supported,
+PLUG,L0储能与燃料电池,NASDAQ,RPLUGUSDT,supported,
+BE,L0储能与燃料电池,NYSE,RBEUSDT,supported,
+GNRC,L0储能与燃料电池,NYSE,,unsupported,"No Bitget spot symbol found for GNRC; tried ['GNRCONUSDT', 'RGNRCUSDT', 'GNRCUSDT']"
+NVTS,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for NVTS; tried ['NVTSONUSDT', 'RNVTSUSDT', 'NVTSUSDT']"
+VRT,L0服务器电源与功率半导体,NYSE,RVRTUSDT,supported,
+WOLF,L0服务器电源与功率半导体,NYSE,,unsupported,"No Bitget spot symbol found for WOLF; tried ['WOLFONUSDT', 'RWOLFUSDT', 'WOLFUSDT']"
+ON,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for ON; tried ['ONONUSDT', 'RONUSDT', 'ONUSDT']"
+ALGM,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for ALGM; tried ['ALGMONUSDT', 'RALGMUSDT', 'ALGMUSDT']"
+DIOD,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for DIOD; tried ['DIODONUSDT', 'RDIODUSDT', 'DIODUSDT']"
+VICR,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for VICR; tried ['VICRONUSDT', 'RVICRUSDT', 'VICRUSDT']"
+AOSL,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for AOSL; tried ['AOSLONUSDT', 'RAOSLUSDT', 'AOSLUSDT']"
+MPWR,L0服务器电源与功率半导体,NASDAQ,RMPWRUSDT,supported,
+POWI,L0服务器电源与功率半导体,NASDAQ,,unsupported,"No Bitget spot symbol found for POWI; tried ['POWIONUSDT', 'RPOWIUSDT', 'POWIUSDT']"
+CARR,L0数据中心散热,NYSE,RCARRUSDT,supported,
+JCI,L0数据中心散热,NYSE,RJCIUSDT,supported,
+MOD,L0数据中心散热,NYSE,,unsupported,"No Bitget spot symbol found for MOD; tried ['MODONUSDT', 'RMODUSDT', 'MODUSDT']"
+FIX,L0数据中心散热,NYSE,RFIXUSDT,supported,
+AAON,L0数据中心散热,NASDAQ,,unsupported,"No Bitget spot symbol found for AAON; tried ['AAONONUSDT', 'RAAONUSDT', 'AAONUSDT']"
+SPXC,L0数据中心散热,NYSE,,unsupported,"No Bitget spot symbol found for SPXC; tried ['SPXCONUSDT', 'RSPXCUSDT', 'SPXCUSDT']"
+LRCX,L0半导体材料与设备,NASDAQ,RLRCXUSDT,supported,
+KLAC,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for KLAC; tried ['KLACONUSDT', 'RKLACUSDT', 'KLACUSDT']"
+AMAT,L0半导体材料与设备,NASDAQ,RAMATUSDT,supported,
+TER,L0半导体材料与设备,NASDAQ,RTERUSDT,supported,
+ASML,L0半导体材料与设备,NASDAQ,RASMLUSDT,supported,
+AEHR,L0半导体材料与设备,NASDAQ,RAEHRUSDT,supported,
+TSEM,L0半导体材料与设备,NASDAQ,RTSEMUSDT,supported,
+ENTG,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for ENTG; tried ['ENTGONUSDT', 'RENTGUSDT', 'ENTGUSDT']"
+ONTO,L0半导体材料与设备,NYSE,,unsupported,"No Bitget spot symbol found for ONTO; tried ['ONTOONUSDT', 'RONTOUSDT', 'ONTOUSDT']"
+MKSI,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for MKSI; tried ['MKSIONUSDT', 'RMKSIUSDT', 'MKSIUSDT']"
+KLIC,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for KLIC; tried ['KLICONUSDT', 'RKLICUSDT', 'KLICUSDT']"
+FORM,L0半导体材料与设备,NASDAQ,FORMUSDT,supported,
+COHU,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for COHU; tried ['COHUONUSDT', 'RCOHUUSDT', 'COHUUSDT']"
+PLAB,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for PLAB; tried ['PLABONUSDT', 'RPLABUSDT', 'PLABUSDT']"
+ICHR,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for ICHR; tried ['ICHRONUSDT', 'RICHRUSDT', 'ICHRUSDT']"
+UCTT,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for UCTT; tried ['UCTTONUSDT', 'RUCTTUSDT', 'UCTTUSDT']"
+VECO,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for VECO; tried ['VECOONUSDT', 'RVECOUSDT', 'VECOUSDT']"
+KEYS,L0半导体材料与设备,NYSE,RKEYSUSDT,supported,
+CAMT,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for CAMT; tried ['CAMTONUSDT', 'RCAMTUSDT', 'CAMTUSDT']"
+AEIS,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for AEIS; tried ['AEISONUSDT', 'RAEISUSDT', 'AEISUSDT']"
+ACLS,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for ACLS; tried ['ACLSONUSDT', 'RACLSUSDT', 'ACLSUSDT']"
+NVMI,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for NVMI; tried ['NVMIONUSDT', 'RNVMIUSDT', 'NVMIUSDT']"
+AZTA,L0半导体材料与设备,NASDAQ,,unsupported,"No Bitget spot symbol found for AZTA; tried ['AZTAONUSDT', 'RAZTAUSDT', 'AZTAUSDT']"
+ARM,L0-EDA与芯片IP,NASDAQ,RARMUSDT,supported,
+CDNS,L0-EDA与芯片IP,NASDAQ,RCDNSUSDT,supported,
+SNPS,L0-EDA与芯片IP,NASDAQ,RSNPSUSDT,supported,
+INTC,L1代工与封测,NASDAQ,RINTCUSDT,supported,
+UMC,L1代工与封测,NYSE,RUMCUSDT,supported,
+ASX,L1代工与封测,NYSE,RASXUSDT,supported,
+TSM,L1代工与封测,NYSE,RTSMUSDT,supported,
+AMKR,L1代工与封测,NASDAQ,,unsupported,"No Bitget spot symbol found for AMKR; tried ['AMKRONUSDT', 'RAMKRUSDT', 'AMKRUSDT']"
+GFS,L1代工与封测,NASDAQ,RGFSUSDT,supported,
+NVDA,L2算力芯片系统与IP,NASDAQ,NVDAONUSDT,supported,
+MU,L2算力芯片系统与IP,NASDAQ,RMUUSDT,supported,
+AVGO,L2算力芯片系统与IP,NASDAQ,RAVGOUSDT,supported,
+MRVL,L2算力芯片系统与IP,NASDAQ,RMRVLUSDT,supported,
+AMD,L2算力芯片系统与IP,NASDAQ,AMDONUSDT,supported,
+QCOM,L2算力芯片系统与IP,NASDAQ,RQCOMUSDT,supported,
+STM,L2算力芯片系统与IP,NYSE,RSTMUSDT,supported,
+CRDO,L2算力芯片系统与IP,NASDAQ,RCRDOUSDT,supported,
+TXN,L2算力芯片系统与IP,NASDAQ,RTXNUSDT,supported,
+MCHP,L2算力芯片系统与IP,NASDAQ,RMCHPUSDT,supported,
+ALAB,L2算力芯片系统与IP,NASDAQ,RALABUSDT,supported,
+HIMX,L2算力芯片系统与IP,NASDAQ,RHIMXUSDT,supported,
+RMBS,L2算力芯片系统与IP,NASDAQ,RRMBSUSDT,supported,
+AMBA,L2算力芯片系统与IP,NASDAQ,,unsupported,"No Bitget spot symbol found for AMBA; tried ['AMBAONUSDT', 'RAMBAUSDT', 'AMBAUSDT']"
+LSCC,L2算力芯片系统与IP,NASDAQ,,unsupported,"No Bitget spot symbol found for LSCC; tried ['LSCCONUSDT', 'RLSCCUSDT', 'LSCCUSDT']"
+CEVA,L2算力芯片系统与IP,NASDAQ,,unsupported,"No Bitget spot symbol found for CEVA; tried ['CEVAONUSDT', 'RCEVAUSDT', 'CEVAUSDT']"
+SITM,L2算力芯片系统与IP,NASDAQ,RSITMUSDT,supported,
+SNDK,L2存储-AI数据,NASDAQ,RSNDKUSDT,supported,
+WDC,L2存储-AI数据,NASDAQ,RWDCUSDT,supported,
+STX,L2存储-AI数据,NASDAQ,RSTXUSDT,supported,
+P,L2存储-AI数据,NYSE,,unsupported,"No Bitget spot symbol found for P; tried ['PONUSDT', 'RPUSDT', 'PUSDT']"
+NTAP,L2存储-AI数据,NASDAQ,RNTAPUSDT,supported,
+SIMO,L2存储-AI数据,NASDAQ,RSIMOUSDT,supported,
+POET,L2光模块CPO光器件,NASDAQ,,unsupported,"No Bitget spot symbol found for POET; tried ['POETONUSDT', 'RPOETUSDT', 'POETUSDT']"
+AXTI,L2光模块CPO光器件,NASDAQ,RAXTIUSDT,supported,
+AAOI,L2光模块CPO光器件,NASDAQ,RAAOIUSDT,supported,
+GLW,L2光模块CPO光器件,NYSE,RGLWUSDT,supported,
+COHR,L2光模块CPO光器件,NYSE,RCOHRUSDT,supported,
+LITE,L2光模块CPO光器件,NASDAQ,RLITEUSDT,supported,
+MXL,L2光模块CPO光器件,NASDAQ,,unsupported,"No Bitget spot symbol found for MXL; tried ['MXLONUSDT', 'RMXLUSDT', 'MXLUSDT']"
+VIAV,L2光模块CPO光器件,NASDAQ,,unsupported,"No Bitget spot symbol found for VIAV; tried ['VIAVONUSDT', 'RVIAVUSDT', 'VIAVUSDT']"
+CIEN,L2光模块CPO光器件,NYSE,RCIENUSDT,supported,
+MTSI,L2光模块CPO光器件,NASDAQ,,unsupported,"No Bitget spot symbol found for MTSI; tried ['MTSIONUSDT', 'RMTSIUSDT', 'MTSIUSDT']"
+FN,L2光模块CPO光器件,NYSE,RFNUSDT,supported,
+NOK,L2交换机与网络,NYSE,RNOKUSDT,supported,
+HPE,L2交换机与网络,NYSE,RHPEUSDT,supported,
+ERIC,L2交换机与网络,NASDAQ,,unsupported,"No Bitget spot symbol found for ERIC; tried ['ERICONUSDT', 'RERICUSDT', 'ERICUSDT']"
+CSCO,L2交换机与网络,NASDAQ,RCSCOUSDT,supported,
+ANET,L2交换机与网络,NYSE,RANETUSDT,supported,
+CALX,L2交换机与网络,NYSE,,unsupported,"No Bitget spot symbol found for CALX; tried ['CALXONUSDT', 'RCALXUSDT', 'CALXUSDT']"
+UI,L2交换机与网络,NYSE,,unsupported,"No Bitget spot symbol found for UI; tried ['UIONUSDT', 'RUIUSDT', 'UIUSDT']"
+APH,L2连接器铜背板,NYSE,RAPHUSDT,supported,
+TEL,L2连接器铜背板,NYSE,RTELUSDT,supported,
+SMTC,L2连接器铜背板,NASDAQ,RSMTCUSDT,supported,
+BELFB,L2连接器铜背板,NASDAQ,,unsupported,"No Bitget spot symbol found for BELFB; tried ['BELFBONUSDT', 'RBELFBUSDT', 'BELFBUSDT']"
+LFUS,L2连接器铜背板,NASDAQ,,unsupported,"No Bitget spot symbol found for LFUS; tried ['LFUSONUSDT', 'RLFUSUSDT', 'LFUSUSDT']"
+TTMI,L2-PCB与基板,NASDAQ,,unsupported,"No Bitget spot symbol found for TTMI; tried ['TTMIONUSDT', 'RTTMIUSDT', 'TTMIUSDT']"
+BHE,L2-PCB与基板,NYSE,,unsupported,"No Bitget spot symbol found for BHE; tried ['BHEONUSDT', 'RBHEUSDT', 'BHEUSDT']"
+PENG,L2-EMS整机代工ODM,NASDAQ,,unsupported,"No Bitget spot symbol found for PENG; tried ['PENGONUSDT', 'RPENGUSDT', 'PENGUSDT']"
+FLEX,L2-EMS整机代工ODM,NASDAQ,RFLEXUSDT,supported,
+CLS,L2-EMS整机代工ODM,NYSE,RCLSUSDT,supported,
+JBL,L2-EMS整机代工ODM,NYSE,,unsupported,"No Bitget spot symbol found for JBL; tried ['JBLONUSDT', 'RJBLUSDT', 'JBLUSDT']"
+SANM,L2-EMS整机代工ODM,NASDAQ,,unsupported,"No Bitget spot symbol found for SANM; tried ['SANMONUSDT', 'RSANMUSDT', 'SANMUSDT']"
+PLXS,L2-EMS整机代工ODM,NASDAQ,,unsupported,"No Bitget spot symbol found for PLXS; tried ['PLXSONUSDT', 'RPLXSUSDT', 'PLXSUSDT']"
+SMCI,L2服务器整机,NASDAQ,RSMCIUSDT,supported,
+HPQ,L2服务器整机,NYSE,,unsupported,"No Bitget spot symbol found for HPQ; tried ['HPQONUSDT', 'RHPQUSDT', 'HPQUSDT']"
+DELL,L2服务器整机,NYSE,RDELLUSDT,supported,
+AMZN,L3-IDC云与数据中心REIT,NASDAQ,AMZNONUSDT,supported,
+GOOGL,L3-IDC云与数据中心REIT,NASDAQ,GOOGLONUSDT,supported,
+CRWV,L3-IDC云与数据中心REIT,NASDAQ,RCRWVUSDT,supported,
+ORCL,L3-IDC云与数据中心REIT,NYSE,RORCLUSDT,supported,
+NBIS,L3-IDC云与数据中心REIT,NASDAQ,RNBISUSDT,supported,
+AMT,L3-IDC云与数据中心REIT,NYSE,RAMTUSDT,supported,
+DLR,L3-IDC云与数据中心REIT,NYSE,RDLRUSDT,supported,
+IRM,L3-IDC云与数据中心REIT,NYSE,,unsupported,"No Bitget spot symbol found for IRM; tried ['IRMONUSDT', 'RIRMUSDT', 'IRMUSDT']"
+EQIX,L3-IDC云与数据中心REIT,NASDAQ,REQIXUSDT,supported,
+MARA,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RMARAUSDT,supported,
+IREN,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RIRENUSDT,supported,
+CIFR,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RCIFRUSDT,supported,
+CLSK,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,,unsupported,"No Bitget spot symbol found for CLSK; tried ['CLSKONUSDT', 'RCLSKUSDT', 'CLSKUSDT']"
+WULF,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RWULFUSDT,supported,
+APLD,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RAPLDUSDT,supported,
+RIOT,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RRIOTUSDT,supported,
+BTDR,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,,unsupported,"No Bitget spot symbol found for BTDR; tried ['BTDRONUSDT', 'RBTDRUSDT', 'BTDRUSDT']"
+CORZ,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,,unsupported,"No Bitget spot symbol found for CORZ; tried ['CORZONUSDT', 'RCORZUSDT', 'CORZUSDT']"
+GLXY,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,RGLXYUSDT,supported,
+HUT,L3-AI数据中心NEOCLOUD与矿工转型,NASDAQ,,unsupported,"No Bitget spot symbol found for HUT; tried ['HUTONUSDT', 'RHUTUSDT', 'HUTUSDT']"
+PLTR,L3软件模型与数据层,NASDAQ,RPLTRUSDT,supported,
+MSFT,L3软件模型与数据层,NASDAQ,MSFTONUSDT,supported,
+IBM,L3软件模型与数据层,NYSE,RIBMUSDT,supported,
+SNOW,L3软件模型与数据层,NYSE,RSNOWUSDT,supported,
+DT,L3软件模型与数据层,NYSE,,unsupported,"No Bitget spot symbol found for DT; tried ['DTONUSDT', 'RDTUSDT', 'DTUSDT']"
+DDOG,L3软件模型与数据层,NASDAQ,RDDOGUSDT,supported,
+ESTC,L3软件模型与数据层,NYSE,,unsupported,"No Bitget spot symbol found for ESTC; tried ['ESTCONUSDT', 'RESTCUSDT', 'ESTCUSDT']"
+TDC,L3软件模型与数据层,NYSE,,unsupported,"No Bitget spot symbol found for TDC; tried ['TDCONUSDT', 'RTDCUSDT', 'TDCUSDT']"
+MDB,L3软件模型与数据层,NASDAQ,RMDBUSDT,supported,
+NOW,L4-AI应用与AGENT,NYSE,RNOWUSDT,supported,
+PATH,L4-AI应用与AGENT,NYSE,,unsupported,"No Bitget spot symbol found for PATH; tried ['PATHONUSDT', 'RPATHUSDT', 'PATHUSDT']"
+META,L4-AI应用与AGENT,NASDAQ,METAONUSDT,supported,
+CRM,L4-AI应用与AGENT,NYSE,RCRMUSDT,supported,
+ADBE,L4-AI应用与AGENT,NASDAQ,RADBEUSDT,supported,
+INTU,L4-AI应用与AGENT,NASDAQ,RINTUUSDT,supported,
+ASAN,L4-AI应用与AGENT,NYSE,,unsupported,"No Bitget spot symbol found for ASAN; tried ['ASANONUSDT', 'RASANUSDT', 'ASANUSDT']"
+AI,L4-AI应用与AGENT,NYSE,AIUSDT,supported,
+DOCU,L4-AI应用与AGENT,NASDAQ,RDOCUUSDT,supported,
+TWLO,L4-AI应用与AGENT,NYSE,,unsupported,"No Bitget spot symbol found for TWLO; tried ['TWLOONUSDT', 'RTWLOUSDT', 'TWLOUSDT']"
+SAP,L4-AI应用与AGENT,NYSE,RSAPUSDT,supported,
+WDAY,L4-AI应用与AGENT,NASDAQ,RWDAYUSDT,supported,
+GTLB,L4-AI应用与AGENT,NASDAQ,,unsupported,"No Bitget spot symbol found for GTLB; tried ['GTLBONUSDT', 'RGTLBUSDT', 'GTLBUSDT']"
+U,L4-AI应用与AGENT,NYSE,RUUSDT,supported,
+ADSK,L4-AI应用与AGENT,NASDAQ,RADSKUSDT,supported,
+DUOL,L4-AI应用与AGENT,NASDAQ,RDUOLUSDT,supported,
+BILL,L4-AI应用与AGENT,NYSE,BILLUSDT,supported,
+APP,L4-AI应用与AGENT,NASDAQ,RAPPUSDT,supported,
+NET,L4-AI应用与AGENT,NYSE,RNETUSDT,supported,
+ZM,L4-AI应用与AGENT,NASDAQ,,unsupported,"No Bitget spot symbol found for ZM; tried ['ZMONUSDT', 'RZMUSDT', 'ZMUSDT']"
+HUBS,L4-AI应用与AGENT,NYSE,,unsupported,"No Bitget spot symbol found for HUBS; tried ['HUBSONUSDT', 'RHUBSUSDT', 'HUBSUSDT']"
+GWRE,L4-AI应用与AGENT,NYSE,RGWREUSDT,supported,
+PEGA,L4-AI应用与AGENT,NASDAQ,,unsupported,"No Bitget spot symbol found for PEGA; tried ['PEGAONUSDT', 'RPEGAUSDT', 'PEGAUSDT']"
+NICE,L4-AI应用与AGENT,NASDAQ,,unsupported,"No Bitget spot symbol found for NICE; tried ['NICEONUSDT', 'RNICEUSDT', 'NICEUSDT']"
+MNDY,L4-AI应用与AGENT,NASDAQ,RMNDYUSDT,supported,
+FICO,L4-AI应用与AGENT,NYSE,,unsupported,"No Bitget spot symbol found for FICO; tried ['FICOONUSDT', 'RFICOUSDT', 'FICOUSDT']"
+PANW,L4网络安全,NASDAQ,RPANWUSDT,supported,
+VRNS,L4网络安全,NASDAQ,,unsupported,"No Bitget spot symbol found for VRNS; tried ['VRNSONUSDT', 'RVRNSUSDT', 'VRNSUSDT']"
+FTNT,L4网络安全,NASDAQ,RFTNTUSDT,supported,
+ZS,L4网络安全,NASDAQ,RZSUSDT,supported,
+S,L4网络安全,NYSE,SUSDT,supported,
+RBRK,L4网络安全,NYSE,,unsupported,"No Bitget spot symbol found for RBRK; tried ['RBRKONUSDT', 'RRBRKUSDT', 'RBRKUSDT']"
+CRWD,L4网络安全,NASDAQ,RCRWDUSDT,supported,
+GEN,L4网络安全,NASDAQ,,unsupported,"No Bitget spot symbol found for GEN; tried ['GENONUSDT', 'RGENUSDT', 'GENUSDT']"
+OKTA,L4网络安全,NASDAQ,ROKTAUSDT,supported,
+TENB,L4网络安全,NASDAQ,,unsupported,"No Bitget spot symbol found for TENB; tried ['TENBONUSDT', 'RTENBUSDT', 'TENBUSDT']"
+CHKP,L4网络安全,NASDAQ,,unsupported,"No Bitget spot symbol found for CHKP; tried ['CHKPONUSDT', 'RCHKPUSDT', 'CHKPUSDT']"
+QLYS,L4网络安全,NASDAQ,,unsupported,"No Bitget spot symbol found for QLYS; tried ['QLYSONUSDT', 'RQLYSUSDT', 'QLYSUSDT']"

@@ -1,0 +1,7 @@
+pandas>=2.0
+requests>=2.31
+yfinance>=0.2
+gradio>=4.44
+plotly>=5.20
+pytest>=8.0
+jinja2>=3.1.2
